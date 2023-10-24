@@ -1,6 +1,6 @@
 # SkiMap
 > Webapp per la ricerca di piste e scuole da sci in Lombardia.  
-(*Original repo [here](https://github.com/Space-13-Team-Undefined/SkiMap)  
+(*Original repo [here](https://github.com/Space-13-Team-Undefined/SkiMap)*)  
 
 ## [ENG] Info  
 This webapp displays informations about ski tracks and ski schools in the Lombardia italian region.  
