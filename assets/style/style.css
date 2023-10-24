@@ -1,0 +1,236 @@
+/*
+Nomenclatura:
+- bg = background
+- cont = container
+- mob = mobile
+ */
+
+
+/*
+Font Evolve:
+- Se usato con font-style: italic; fornisce uno stile più unico
+- Per usare lo stile bold mettere font-weight: bold;
+- Per usare uno stile più sottile mettere font-weight: 100;
+ */
+@font-face {
+  font-family: "Evolve";
+  src: url(~assets/fonts/MADE-Evolve-Sans-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Evolve";
+  font-style: italic;
+  src: url(~assets/fonts/MADE-Evolve-Sans-Regular-EVO.otf) format("opentype");
+}
+@font-face {
+  font-family: "Evolve";
+  font-weight: bold;
+  src: url(~assets/fonts/MADE-Evolve-Sans-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Evolve";
+  font-weight: bold;
+  font-style: italic;
+  src: url(~assets/fonts/MADE-Evolve-Sans-Medium-EVO.otf) format("opentype");
+}
+@font-face {
+  font-family: "Evolve";
+  font-weight: 100;
+  src: url(~assets/fonts/MADE-Evolve-Sans-Thin.otf) format("opentype");
+}
+
+
+/* Font per titoli grandi */
+@font-face {
+  font-family: "ITCAvantGardenPro";
+  src: local("ITCAvantGardenPro"), url(~assets/fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+
+:root {
+  /* palette colori */
+  --primario: #1d3557;
+  --secondario: #457b9d;
+  --terziario: #a8dadc;
+  --accento: #e63946;
+  --sfondo: #FFF;
+  --bordo: #000;
+  --titolo: #000;
+  --testo: #000;
+  --link: #000;
+
+  --diff-blue: #4361ee;
+  --diff-rosso: #e63946;
+  --diff-nero: #03071e;
+
+  --inclinazione: -20deg;
+  --anti-inclinazione: 20deg;
+  --vel-transizione: 500ms;
+  --stile-transizione: ease-in-out;
+}
+
+/* Evita ridimensionamenti con padding e margin */
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--sfondo);
+  z-index: -1000;
+  font-family: "Evolve", serif;
+  font-size: 1rem;
+  color: var(--testo);
+  overflow: auto;
+}
+
+html, body {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+
+}
+
+#__nuxt, #__layout {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link)
+}
+.cliccabile:hover {
+  color: var(--secondario);
+  stroke: var(--secondario);
+}
+.cliccabile:hover svg {
+  stroke: var(--secondario);
+}
+
+a:hover {
+  color: var(--secondario) !important;
+}
+
+svg {
+  height: auto;
+}
+
+
+/* Classi d'utilità */
+/* Struttura */
+.fullscreen {
+  height: 100%; /* Per evitare problemi nei telefoni */
+  width: 100vw;
+}
+.maxDim {
+  height: 100%;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* Testi */
+.titolo {
+  font-family: "Evolve", serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--titolo);
+}
+.testo {
+  font-family: "Evolve", serif;
+  font-size: 1rem;
+  color: var(--testo);
+}
+.descrizione {
+  font-family: "Evolve", serif;
+  font-weight: 100;
+  font-size: 1rem;
+  color: var(--testo);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--accento);
+}
+
+::selection {
+  color: white;
+  background: var(--accento);
+}
+
+
+
+/* Visibilità */
+.cliccabile {
+  cursor: pointer;
+}
+
+.davanti {
+  z-index: 100;
+}
+.davanti2 {
+  z-index: 99;
+}
+.davanti3 {
+  z-index: 98;
+}
+
+.nascosto {
+  display: none !important;
+}
+
+/* Occupa spazio */
+.invisibile {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  /* Dispositivi mobile */
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2500px) {
+  :root { font-size: 20px; }
+}
+@media screen and (min-width: 2501px) and (max-width: 3000px) {
+  :root { font-size: 25px; }
+}
+@media screen and (min-width: 3001px) and (max-width: 3500px) {
+  :root { font-size: 30px; }
+}
+@media screen and (min-width: 3501px) and (max-width: 4000px) {
+  :root { font-size: 35px; }
+}
+@media screen and (min-width: 4001px) and (max-width: 4500px){
+  :root { font-size: 40px; }
+}
+@media screen and (min-width: 4501px) and (max-width: 5000px){
+  :root { font-size: 45px; }
+}
+@media screen and (min-width: 5001px){
+  :root { font-size: 50px; }
+}

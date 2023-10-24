@@ -1,0 +1,53 @@
+{
+  "name": "SkiMap-Lombardia",
+  "version": "1.0.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Space-13-Team-Undefined/SkiMap.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/Space-13-Team-Undefined/SkiMap/issues"
+  },
+  "contributors": [
+    {
+      "name" : "Giulio Pimenoff Verdolin",
+      "email" : "giuliopime@gmail.com"
+    },
+    {
+      "name" : "Luca Damaschetti",
+      "email" : "luca.damaschetti@gmail.com"
+    },
+    {
+      "name" : "Francesco Fragonas",
+      "email" : "francesco.fragonas@gmail.com"
+    },
+    {
+      "name" : "Giacomo Pesenato",
+      "email" : "giacomopesenato@gmail.com"
+    },
+    {
+      "name" : "Filippo Miraglia",
+      "email" : "filippo.miraglia@iis-silva-ricci.edu.it"
+    }
+  ],
+  "engines": {
+    "node": "16.16.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "nuxt-gmaps": "^1.2.10"
+  },
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1"
+  }
+}
